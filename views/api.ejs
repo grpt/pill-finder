@@ -1,0 +1,201 @@
+<html>
+    <head>
+        <title>API</title>
+
+        <style>
+            body {
+                margin-left: 50px;
+                margin-right: 50px;
+            }
+            .title {
+                font-size: 50px;
+                margin-left: 30px;
+            }
+            .border {
+                width:50%;
+                border: 0.5px solid lightgray;
+            }
+            table {
+                width: 30%;
+            }
+
+            th {
+                background-color: lightgray;
+            }
+
+            table, th, tr, td {
+                font-size:20px;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="title">API Page</div>
+        <div class="border"></div>
+        </br>
+        <table>
+            <caption>제품명으로 약 검색</caption>
+            <thead>
+                <tr>
+                    <th>URI</th>
+                    <th>METHOD</th>
+                    <th>RESULT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>/name/:name</td>
+                    <td>GET</td>
+                    <td><pre>
+{
+    'status' : 200,
+    'result' : [
+        {
+            'pill_main' : {
+                'name' : 제품명,  
+                'character1' : 약 앞면 글씨,    
+                'character2' : 약 뒷면 글씨,    
+                'color' : 약 색깔,  
+                'shape' : 약 모양,
+                'img' : 약 이미지 주소
+            },
+            'pill_details': {
+                'basic': {
+                    'main' : 기본정보,
+                    'shapes' : 외형정보,
+                    'element' : 성분정보,
+                    'store' : 저장방법
+                },
+                'effect' : 효능효과,
+                'howto' : 용법용량,
+                'caution' : 주의사항
+            }
+        }
+    ]
+}</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </br>
+        <div class="border"></div>
+        </br>
+        <table>
+            <caption>성분으로 약 검색</caption>
+            <thead>
+                <tr>
+                    <th>URI</th>
+                    <th>METHOD</th>
+                    <th>RESULT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>/shape</td>
+                    <td>GET</td>
+                    <td><pre>
+{
+    'status' : 200,
+    'result' : [
+        {
+            'pill_main' : {
+                'name' : 제품명,  
+                'character1' : 약 앞면 글씨,    
+                'character2' : 약 뒷면 글씨,    
+                'color' : 약 색깔,  
+                'shape' : 약 모양,
+                'img' : 약 이미지 주소
+            },
+            'pill_details': {
+                'basic': {
+                    'main' : 기본정보,
+                    'shapes' : 외형정보,
+                    'element' : 성분정보,
+                    'store' : 저장방법
+                },
+                'effect' : 효능효과,
+                'howto' : 용법용량,
+                'caution' : 주의사항
+            }
+        }
+    ]
+}</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        </br>
+        <table>
+            <thead>
+                <tr>
+                    <th>QUERY</th>
+                    <th>DESCRIPTION</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>character1</td>
+                    <td>약 앞면 글씨</td>
+                </tr>
+                <tr>
+                    <td>character2</td>
+                    <td>약 뒷면 글씨</td>
+                </tr>
+                <tr>
+                    <td>color</td>
+                    <td>약 색깔</td>
+                </tr>
+                <tr>
+                    <td>shape</td>
+                    <td>약 모양</td>
+                </tr>
+            </tbody>
+        </table>
+        </br><div class="border"></div></br>
+        <table>
+            <caption>db에 약 정보 집어 넣기</caption>
+            <thead>
+                <tr>
+                    <th>URI</th>
+                    <th>METHOD</th>
+                    <th>INPUT</th>
+                    <th>RESULT</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>/shape</td>
+                    <td>POST</td>
+                    <td>
+                        <pre>
+{
+    'pill_main' : {
+        'name' : 제품명,  
+        'character1' : 약 앞면 글씨,    
+        'character2' : 약 뒷면 글씨,    
+        'color' : 약 색깔,  
+        'shape' : 약 모양,
+        'img' : 약 이미지 주소
+    },
+    'pill_details': {
+        basic: {
+            'main' : 기본정보,
+            'shapes' : 외형정보,
+            'element' : 성분정보,
+            'store' : 저장방법
+        },
+        'effect' : 효능효과,
+        'howto' : 용법용량,
+        'caution' : 주의사항
+    }
+}</pre>
+                    </td>
+                    <td>
+                        <pre>
+{result : 200}</pre>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
