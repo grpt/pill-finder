@@ -1,4 +1,9 @@
 # 필파인더 (Pill-Finder)
+![](https://img.shields.io/badge/github-license--MIT-green)
+![](https://img.shields.io/badge/github-python--3.7-red)
+![](https://img.shields.io/badge/github-tensorflow--1.13.2-red)
+![](https://img.shields.io/badge/github-opencv--4.1.1.26-red)
+
 
 사진으로 약의 정보를 알 수 있는 어플리케이션입니다.
 
