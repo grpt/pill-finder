@@ -1,0 +1,6 @@
+model_checkpoint_path: "char-16500"
+all_model_checkpoint_paths: "char-16100"
+all_model_checkpoint_paths: "char-16200"
+all_model_checkpoint_paths: "char-16300"
+all_model_checkpoint_paths: "char-16400"
+all_model_checkpoint_paths: "char-16500"
