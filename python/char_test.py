@@ -33,9 +33,9 @@ def char_test(image):
     with tf.Session(graph=graph) as sess:
         sess.run(tf.global_variables_initializer())
         saver = tf.train.Saver()
-        saver.restore(sess, 'saver/char/char-16100')
+        saver.restore(sess, 'saver/char1/char-1600')
         image = cv2.resize(image, (size, size))
         image = np.reshape(image, [-1, size, size, 1])
         pred = sess.run(logits, feed_dict={X: image, keep_prob: 1.0})
-    
+
     return np.argmax(pred, 1)

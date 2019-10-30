@@ -10,6 +10,8 @@ var storage = multer.diskStorage({
         cb(null, file.originalname)
     }
   })
+
+
 var upload = multer({ storage: storage })
 
 var spawn = require('child_process').spawn
@@ -20,12 +22,14 @@ module.exports = router
 
 router.post('/', upload.single('uploaded_file'), (req, res) => {
 
-    console.log(req.file.path)
-    var process = spawn('python3', ['python/test.py', req.file.path])
+    var path = req.file.path
+    // var path = "uploads/16.jpg"
+
+    var process = spawn('python3', ['python/test.py', path])
 
     process.stdout.on('data', (data) => {
         data = String(data)
-        console.log(data)
+        // console.log(data)
 
         json = JSON.parse(data)
 
@@ -34,7 +38,7 @@ router.post('/', upload.single('uploaded_file'), (req, res) => {
 
     process.stderr.on('data', (data) => {
         data = String(data)
-        console.log(data)
+        // console.log(data)
 
     })
 

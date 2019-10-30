@@ -1,0 +1,6 @@
+model_checkpoint_path: "char-1600"
+all_model_checkpoint_paths: "char-1200"
+all_model_checkpoint_paths: "char-1300"
+all_model_checkpoint_paths: "char-1400"
+all_model_checkpoint_paths: "char-1500"
+all_model_checkpoint_paths: "char-1600"
