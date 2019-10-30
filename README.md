@@ -1,5 +1,5 @@
 # 필파인더 (Pill-Finder)
-![](https://img.shields.io/badge/license-Apache 2.0-green)
+![](https://img.shields.io/badge/license-Apache2.0-green)
 ![](https://img.shields.io/badge/python-3.7-red)
 ![](https://img.shields.io/badge/tensorflow-1.13.2-red)
 ![](https://img.shields.io/badge/opencv-4.1.1.26-red)
