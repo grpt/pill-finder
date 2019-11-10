@@ -12,10 +12,10 @@ def findtext(imgcolorc, imgcolorf):
     img2 = imgcolorf
     row, col, _ = img.shape
     row2, col2, _ = img2.shape
-    distrow = (int)(row * 0.2)
-    distcol = (int)(col * 0.2)
-    distrow2 = (int)(row2 * 0.2)
-    distcol2 = (int)(col2 * 0.2)
+    distrow = (int)(row * 0.1)
+    distcol = (int)(col * 0.1)
+    distrow2 = (int)(row2 * 0.1)
+    distcol2 = (int)(col2 * 0.1)
     img = img[0 + distrow:row - distrow, 0 + distcol:col - distcol] #이미지의 크기를 설정
     img2 = img2[0 + distrow2:row2 - distrow2, 0 + distcol2:col2 - distcol2] #이미지의 크기를 설정
 
